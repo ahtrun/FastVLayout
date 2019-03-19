@@ -22,12 +22,6 @@ ScrollListener ：用于处理模块中的滑动事件，需要的时候进行�
 **VLayoutBuilder builder=VLayoutBuilder.newInnerBuilder(this);** <br>
         ## 绑定RecylerView <br>
         **builder.bindRecylerView(rvHome);**<br>
-        ## 注册了一个自带的banner组件 <br>
-        **builder.registerView(BANNER,VBannerHolder.class);**<br>
-        ## 注册了一个自带的navigation组件<br>
-        **builder.registerView(NAVIGATION,VNavigationHolder.class);**<br>
-        ##注册了一个自带的一拖N组件组件<br>
-        **builder.registerView(ONE_PLUS_N,VOnePlusNHolder.class);**<br>
         ##注册了一个自定义的navigation组件<br>
         **builder.registerView("homeGuide", com.lhp.hotfixdemo.VNavigationHolder.class);**<br>
         ##绑定model数据<br>
@@ -69,7 +63,33 @@ private int itemCount;//item数量<br>
 private float[] mColWeights;//横向item的宽度占比，最大值100<br>
 private float mRowWeight;//纵向item的宽度占比，最大值100<br>
         <br>
+**ScrollFixModel**<br>
+//ScrollFixLayoutHelper.SHOW_ALWAYS 一直显示<br>
+//ScrollFixLayoutHelper.SHOW_ON_ENTER view 进入页面时显示<br>
+//ScrollFixLayoutHelper.SHOW_ON_LEAVE view 离开页面时显示<br>
+private int showType;//显示方式<br> 
+//FixLayoutHelper.TOP_LEFT FixLayoutHelper.TOP_RIGHT FixLayoutHelper.BOTTOM_LEFT FixLayoutHelper.BOTTOM_RIGHT <br>
+private int alignType;//显示位置<br>
+private int X;//X轴上的偏移量，例如在左上角时，x就是与左边的间距<br>
+private int Y;//Y轴上的偏移量，例如在左上角时，y就是与顶部的间距<br>
+private int width;//控件宽度，单位px<br>
+private int height;//控件高度，单位px<br>
+<br>
+**TextTitleModel**<br>
+private float textSize;//字体大小<br>
+private int[] paddings=new int[0];//padding<br>
+private int textColor;//字体颜色<br>
+<br>
+ **FloatModel**<br>
+ //FixLayoutHelper.TOP_LEFT FixLayoutHelper.TOP_RIGHT FixLayoutHelper.BOTTOM_LEFT FixLayoutHelper.BOTTOM_RIGHT <br>
+ private int alignType;//显示位置<br>
+ private int X;//X轴上的偏移量，例如在左上角时，x就是与左边的间距<br>
+ private int Y;//Y轴上的偏移量，例如在左上角时，y就是与顶部的间距<br>
+ private int width;//控件宽度，单位px<br>
+ private int height;//控件高度，单位px<br>   
+<br>        
+ **StickyModel**<br>
+private boolean mStickyStart=true;//false=吸低，true=吸顶 默认吸顶<br>
+private int mOffset = 0;//距离顶部或者底部的偏移量<br>
+private ItemDataBind itemDataBind;//item中的数据绑定接口<br>       
 
-
-       
- 
