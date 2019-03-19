@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="lang_broder">2dp</dimen>
+    <dimen name="lang_broder2">1dp</dimen>
+
+    <dimen name="lang_pop_width">50dp</dimen>
+    <dimen name="lang_pop_height">36dp</dimen>
+
+    <dimen name="lang_banner_leftright">15dp</dimen>
+    <dimen name="lang_banner_topbottom">5dp</dimen>
+</resources>

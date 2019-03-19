@@ -1,0 +1,40 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_home_btn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/iv_home_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitCenter"
+        />
+
+    <TextView
+        android:layout_below="@+id/iv_home_btn"
+        android:gravity="center"
+        android:id="@+id/tv_home_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="环球馆"
+        android:textColor="@color/colorBlackText2"
+        android:textSize="12sp" />
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/iv_dot"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:background="@drawable/bg_textview_order_state"
+        android:layout_alignTop="@+id/iv_home_btn"
+        android:layout_alignRight="@+id/iv_home_btn"
+        />
+</RelativeLayout>
