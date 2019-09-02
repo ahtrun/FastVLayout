@@ -106,7 +106,7 @@ private ItemDataBind itemDataBind;//item中的数据绑定接口<br>
    - StickyLayoutHelper: stikcy布局， 可以配置吸顶或者吸底 <br>
    - StaggeredGridLayoutHelper: 瀑布流布局，可配置间隔高度/宽度<br>
    第一步：需要创建一个VHolder继承自VBaseHolder<br>
-   实现传入view的构造方法，实现setData方法<br>
+   实现传入view的构造方法，实现setData方法，在VHolder中需要做页面的逻辑处理和响应事件<br>
    第二步：需要注册这个VHolder<br>
    builder.registerView("modelKey", VHolder.class);<br>
    第三步：需要创建继承自BaseModel的VModel<br>
